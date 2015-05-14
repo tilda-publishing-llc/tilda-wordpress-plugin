@@ -24,7 +24,7 @@ class Tilda
     {
         $upload = wp_upload_dir();
         $upload_dir = $upload['basedir'];
-        $upload_dir = $upload_dir . '/tilda_pages/';
+        $upload_dir = $upload_dir . '/tilda/';
         if (!is_dir($upload_dir)) {
             mkdir($upload_dir, 0755);
         }
@@ -45,7 +45,7 @@ class Tilda
     {
         $upload = wp_upload_dir();
         $upload_dir = $upload['baseurl'];
-        $upload_dir = $upload_dir . '/tilda_pages/';
+        $upload_dir = $upload_dir . '/tilda/';
         return $upload_dir;
     }
 

@@ -42,6 +42,7 @@ if ($has_current) {
 }?>
 <div class="tilda_pages_list <? if ($has_current) {echo 'close';}?>">
     <? if ($projects_list) {?>
+        <p>Пожалуйста выберите страницу из списка</p>
         <div class="tilda_projects_tabs">
             <div class="form">
                 <ul>
