@@ -52,4 +52,7 @@ msgstr "Ключи безопастности не заданы"
 msgid "Too much requests per hour. Limit: 200 requests per 1 hour"
 msgstr "Превышен лимит запросов в час. Лимит 200 запросов в час"
 
+msgid "Not found library "
+msgstr "Не найдена библиотека "
+
 

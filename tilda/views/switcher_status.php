@@ -15,26 +15,28 @@ if (!Tilda::verify_access()) {
     $toggle_class = 'disabled';
 }
 ?>
-<? wp_nonce_field('tilda_switcher', 'tilda_nonce'); ?>
+<div class="tilda wrap">
+    <? wp_nonce_field('tilda_switcher', 'tilda_nonce'); ?>
 
-<input type="hidden" name="tilda[status]" value="<?= esc_attr($status) ?>"/>
+    <input type="hidden" name="tilda[status]" value="<?= esc_attr($status) ?>"/>
 
-<? Tilda::show_errors(); ?>
+    <? Tilda::show_errors(); ?>
 
-<p>
-    <? if (empty($post->post_title)) { ?>
-        <small>Для того, чтобы включилась Тильда, необходимо указать заголовок страницы.</small>
-    <? } else { ?>
-        <input type="submit"
-               name="submit"
-               id="tilda_toggle"
-               class="button <?= $toggle_class ?>"
-               value="Включить Тильду для этой страницы">
-        &nbsp;&nbsp;&nbsp;
-        <? if (!Tilda::verify_access()): ?>
-            <a href="options-general.php?page=tilda-config">
-                Привязать аккаунт Тильды
-            </a>
-        <? endif; ?>
-    <? } ?>
-</p>
+    <p>
+        <? if (empty($post->post_title)) { ?>
+            <small>Для того, чтобы включить Тильду, необходимо указать заголовок страницы и нажать кнопку «Сохранить».
+            </small>
+        <? } else { ?>
+            <input type="submit"
+                   id="tilda_toggle"
+                   class="button <?= $toggle_class ?>"
+                   value="Включить Тильду для этой страницы">
+            &nbsp;&nbsp;&nbsp;
+            <? if (!Tilda::verify_access()): ?>
+                <a href="options-general.php?page=tilda-config">
+                    Привязать аккаунт Тильды
+                </a>
+            <? endif; ?>
+        <? } ?>
+    </p>
+</div>

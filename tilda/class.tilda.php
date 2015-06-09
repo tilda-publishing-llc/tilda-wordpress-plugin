@@ -36,7 +36,7 @@ class Tilda
         $errors = self::$errors->get_error_messages();
         echo '<ul class="errors">';
         foreach ($errors as $error) {
-            echo '<li class="error silver"><span class="red">Ошибка:</span> ' . $error . '</li>';
+            echo '<li class="error silver" style="color:#9F9F9F;"><span class="red" style="color:#C60000">Ошибка:</span> ' . $error . '</li>';
         }
         echo '</ul>';
     }
